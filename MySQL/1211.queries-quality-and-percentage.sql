@@ -8,4 +8,4 @@ from Queries q left join
 
 (select query_name, count(query_name) as b_quality from Queries where rating < 3
 group by query_name) as e on q.query_name = e.query_name
-where q.query_name is not null group by query_name
+where q.query_name is not null group by query_name.
